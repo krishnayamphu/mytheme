@@ -43,6 +43,17 @@ add_theme_support('post-thumbnails');
 function myTheme_widgets_init()
 {
 
+
+    //aside ads
+    register_sidebar(array(
+        'name' => __('Aside Ad', 'myTheme'),
+        'id' => 'aside-ad',
+        'description' => __('Add ads here to appear on blog posts area.', 'myTheme'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 }
 
 add_action('widgets_init', 'myTheme_widgets_init');
