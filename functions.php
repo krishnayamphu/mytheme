@@ -31,6 +31,10 @@ function myTheme_setup()
         'primary' => __('Primary Menu', 'myTheme'),
     ));
 
+    register_nav_menus(array(
+        'quick-links' => __('Quick Links', 'myTheme'),
+    ));
+
 }
 
 add_action('after_setup_theme', 'myTheme_setup');
@@ -44,16 +48,38 @@ function myTheme_widgets_init()
 {
 
 
-    //aside ads
+    //recent post
     register_sidebar(array(
-        'name' => __('Aside Ad', 'myTheme'),
-        'id' => 'aside-ad',
+        'name' => __('Recent Post', 'myTheme'),
+        'id' => 'recent-post',
         'description' => __('Add ads here to appear on blog posts area.', 'myTheme'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
+
+
+    //banner ads
+    register_sidebar(array(
+        'name' => __('Header Banner', 'myTheme'),
+        'id' => 'header-banner',
+        'description' => __('Add ads here to appear on header area.', 'myTheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+    ));
+
+    //recent post
+    register_sidebar(array(
+        'name' => __('Quick Links', 'myTheme'),
+        'id' => 'quick-links',
+        'description' => __('Add ads here to appear on blog posts area.', 'myTheme'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
 }
 
 add_action('widgets_init', 'myTheme_widgets_init');

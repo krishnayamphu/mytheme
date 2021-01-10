@@ -19,6 +19,12 @@
                 </ul>
                 <?php endif; ?>
             </div>
+
+            <div class="col-6">
+                <?php if ( is_active_sidebar( 'recent-post' ) ) : ?>
+                <?php dynamic_sidebar( 'recent-post' ); ?>
+                <?php endif; ?>
+            </div>      
         </div>
     </div>
 

@@ -11,12 +11,17 @@
 <body>
 <header>
     <div class="container">
-        <!--
-            this is html comment
-        -->
-        <h1><?php echo get_bloginfo('name'); ?></h1>
-
-        <p><?php echo get_bloginfo('description'); ?></p>
+        <div class="row py-3">
+            <div class="col-3">
+                <h1><?php echo get_bloginfo('name'); ?></h1>
+                <p><?php echo get_bloginfo('description'); ?></p>
+            </div>
+            <div class="col-9">
+                 <?php if (is_active_sidebar('header-banner')) : ?>
+                    <?php dynamic_sidebar('header-banner'); ?>
+                <?php endif; ?>
+            </div>
+        </div>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
 
