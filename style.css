@@ -18,3 +18,17 @@ Tags: one-column,custom-menu, custom-logo, featured-images, footer-widgets
 .cat-img{
 	height: 250px !important;
 }
+a{
+	text-decoration: none;
+}
+
+.cat-bar{
+	background-color: #212529;
+	margin-top: 15px;
+	padding: 5px 15px 5px 15px;
+	color: white;
+}
+
+.post-list-img{
+height: 120px;
+}
