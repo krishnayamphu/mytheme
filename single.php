@@ -4,33 +4,11 @@
         <div class="row">
             <div class="col-8">
                 <?php
-                if ( has_post_format( 'gallery' )) {
-                    ?>
-
-                   <p> 'this is the gallery format';</p>
-                    <?php
-                }else{
-                ?>
-                <?php
-                if (have_posts()) :while (have_posts()) : the_post();
-                    ?>
-                    <div class="card">
-
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                <?php the_title(); ?>
-                            </h1>
-                            <?php the_post_thumbnail('full', array('class' => 'card-img-top post-img'));
-                            ?>
-                            <p class="card-text">
-                                <?php the_content(); ?>
-                            </p>
-                        </div>
-                    </div>
-                <?php
-                endwhile;
-                endif;
-                }
+                if (has_post_format('gallery')) {
+                    get_template_part('template-parts/content/gallery');
+                }else {
+                    get_template_part('template-parts/content/content');
+                    }
                 ?>
             </div>
             <div class="col-4">
