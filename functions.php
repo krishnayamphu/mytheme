@@ -39,8 +39,17 @@ function myTheme_setup()
 
 add_action('after_setup_theme', 'myTheme_setup');
 
+
+
 //enable featured image
 add_theme_support('post-thumbnails');
+
+
+//post formats
+function myTheme_post_formats_setup() {
+ add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+}
+add_action( 'after_setup_theme', 'myTheme_post_formats_setup');
 
 
 //custom user widget function

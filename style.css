@@ -32,3 +32,24 @@ a{
 .post-list-img{
 height: 120px;
 }
+
+/**
+search form
+ */
+
+.screen-reader-text{
+	display: none;
+}
+
+/**
+footer
+ */
+
+footer{
+	padding-top: 15px;
+	background-color: #212529;
+	padding-bottom: 15px;
+}
+footer .widget-title{
+	color: white;
+}

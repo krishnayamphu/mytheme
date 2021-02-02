@@ -4,14 +4,6 @@
         <div class="row">
             <div class="col-8">
                 <?php
-                if ( has_post_format( 'gallery' )) {
-                    ?>
-
-                   <p> 'this is the gallery format';</p>
-                    <?php
-                }else{
-                ?>
-                <?php
                 if (have_posts()) :while (have_posts()) : the_post();
                     ?>
                     <div class="card">
@@ -30,7 +22,6 @@
                 <?php
                 endwhile;
                 endif;
-                }
                 ?>
             </div>
             <div class="col-4">

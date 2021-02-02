@@ -3,14 +3,8 @@
     <div class="container p-5">
         <div class="row">
             <div class="col-8">
-                <?php
-                if ( has_post_format( 'gallery' )) {
-                    ?>
-
-                   <p> 'this is the gallery format';</p>
-                    <?php
-                }else{
-                ?>
+                <h5>Contact Us</h5>
+                <hr>
                 <?php
                 if (have_posts()) :while (have_posts()) : the_post();
                     ?>
@@ -30,14 +24,11 @@
                 <?php
                 endwhile;
                 endif;
-                }
                 ?>
+                <?php echo do_shortcode('[contact-form-7 id="56" title="Contact form 1"]'); ?>
+
             </div>
-            <div class="col-4">
-                <?php if (is_active_sidebar('recent-post')) : ?>
-                    <?php dynamic_sidebar('recent-post'); ?>
-                <?php endif; ?>
-            </div>
+        
         </div>
     </div>
 
