@@ -9,12 +9,11 @@
 </head>
 
 <body>
-    <header class="bg-info">
-        <h3 class="text-primary text-center"><?php bloginfo("name") ?></h3>
-        <p class="text-center"><?php bloginfo("description") ?></p>
-    </header>
-
+    <?php
+    get_header();
+    ?>
     <main>
+        <h4>home.php</h4>
         <?php while (have_posts()) : the_post(); ?>
             <h2><a href="<?php the_permalink() ?>">
                     <?php the_title(); ?>

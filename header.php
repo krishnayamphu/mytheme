@@ -13,3 +13,7 @@
         <h3 class="text-primary text-center"><a href="<?php bloginfo("url") ?>"><?php bloginfo("name") ?></a></h3>
         <p class="text-center"><?php bloginfo("description") ?></p>
     </header>
+
+    <?php
+    wp_nav_menu(array('theme_location' => 'primary'));
+    ?>

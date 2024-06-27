@@ -3,12 +3,11 @@ get_header();
 ?>
 
 <main>
-
     <div class="container">
-        <h4>single.php</h4>
+        <h4>category.php</h4>
         <?php while (have_posts()) : the_post(); ?>
-            <h1><?php the_title(); ?></h1>
-            <?php the_content() ?>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
         <?php endwhile; ?>
     </div>
 </main>
