@@ -6,5 +6,7 @@ if (!function_exists('mytheme_setup')) {
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'mytheme'),
         ));
+
+        add_theme_support('post-thumbnails');
     }
 }

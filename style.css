@@ -14,3 +14,18 @@
  * License:           GNU General Public License v2.0 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
+
+/* .category */
+.category img {
+  height: 200px;
+  object-fit: cover;
+}
+.category a {
+  text-decoration: none;
+}
+
+/* .post-single */
+.post-single img {
+  height: 100%;
+  object-fit: cover;
+}

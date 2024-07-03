@@ -5,11 +5,13 @@ get_header();
 <main>
 
     <div class="container">
-        <h4>single.php</h4>
-        <?php while (have_posts()) : the_post(); ?>
-            <h1><?php the_title(); ?></h1>
-            <?php the_content() ?>
-        <?php endwhile; ?>
+        <article class="post-single">
+            <?php while (have_posts()) : the_post(); ?>
+                <h1><?php the_title(); ?></h1>
+                <?php the_post_thumbnail('large', array('class' => 'w-100')); ?>
+                <?php the_content() ?>
+            <?php endwhile; ?>
+        </article>
     </div>
 </main>
 
