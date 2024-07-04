@@ -11,10 +11,29 @@
 
 <body>
     <header class="bg-info">
-        <h3 class="text-primary text-center"><a href="<?php bloginfo("url") ?>"><?php bloginfo("name") ?></a></h3>
-        <p class="text-center"><?php bloginfo("description") ?></p>
-    </header>
 
-    <?php
-    wp_nav_menu(array('theme_location' => 'primary'));
-    ?>
+        <nav class="navbar navbar-expand-lg bg-dark" role="navigation" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="<?php bloginfo('url') ?>">
+                    <?php bloginfo('name') ?>
+                </a>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <?php
+                wp_nav_menu(array(
+                    'theme_location'    => 'primary',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'bs-example-navbar-collapse-1',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker(),
+                ));
+                ?>
+            </div>
+        </nav>
+    </header>
