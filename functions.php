@@ -8,6 +8,16 @@ if (!file_exists(get_template_directory() . '/inc/class-wp-bootstrap-navwalker.p
 }
 
 /**
+ * bootstrap5 pagination
+ */
+if (!file_exists(get_template_directory() . '/inc/wp-bootstrap5.0-pagination.php')) {
+    return new WP_Error('wp-bootstrap5.0-pagination', __('It appears the wp-custom-posts.php file may be missing.', 'wp-bootstrap5.0-pagination'));
+} else {
+    require_once get_template_directory() . '/inc/wp-bootstrap5.0-pagination.php';
+}
+
+
+/**
  * Retrieve Custom Posts
  */
 if (!file_exists(get_template_directory() . '/inc/wp-custom-posts.php')) {
