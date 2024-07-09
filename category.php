@@ -43,7 +43,7 @@ $category_id = $category->term_id;
                 </div>
             </div>
             <div class="col-lg-3">
-
+                <?php dynamic_sidebar('sidebar'); ?>
             </div>
         </div>
     </div>

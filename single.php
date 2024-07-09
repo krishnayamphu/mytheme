@@ -15,7 +15,7 @@ get_header();
                 </article>
             </div>
             <div class="col col-lg-4">
-
+                <?php dynamic_sidebar('sidebar'); ?>
             </div>
         </div>
     </div>

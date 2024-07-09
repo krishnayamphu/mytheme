@@ -35,3 +35,10 @@
   height: 200px;
   object-fit: cover;
 }
+
+.widget img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 300px;
+}

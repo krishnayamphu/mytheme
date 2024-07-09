@@ -38,3 +38,46 @@ if (!function_exists('mytheme_setup')) {
         add_theme_support('post-thumbnails');
     }
 }
+
+add_action('widgets_init', 'mytheme_widgets_init');
+
+function mytheme_widgets_init()
+{
+    register_sidebar(array(
+        'name' => __('Sidebar', 'mytheme'),
+        'id' => 'sidebar',
+        'description' => __('Add widgets here to appear in page or post .', 'mytheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
+    ));
+
+    register_sidebar(array(
+        'name' => __('Footer 1', 'mytheme'),
+        'id' => 'footer-1',
+        'description' => __('Add widgets here to appear in your footer area.', 'mytheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s footer-1">',
+        'after_widget' => '</div>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
+    ));
+    register_sidebar(array(
+        'name' => __('Footer 2', 'mytheme'),
+        'id' => 'footer-2',
+        'description' => __('Add widgets here to appear in your footer area.', 'mytheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s footer-1">',
+        'after_widget' => '</div>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
+    ));
+    register_sidebar(array(
+        'name' => __('Footer 3', 'mytheme'),
+        'id' => 'footer-3',
+        'description' => __('Add widgets here to appear in your footer area.', 'mytheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s footer-1">',
+        'after_widget' => '</div>',
+        'before_title' => '<h6 class="widget-title">',
+        'after_title' => '</h6>',
+    ));
+}
